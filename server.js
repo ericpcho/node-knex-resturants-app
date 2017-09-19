@@ -12,12 +12,12 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 
-// app.get('/restaurants', (req, res) => {
-//   knex.select('id', 'name', 'cuisine', 'borough')
-//     .from('restaurants')
-//     .limit(10)
-//     .then(results => res.json(results));
-// });
+app.get('/restaurants', (req, res) => {
+  knex.select('id', 'name', 'cuisine', 'borough')
+    .from('restaurants')
+    .limit(10)
+    .then(results => res.json(results));
+});
 
 // app.get('/restaurants/:id', (req, res) => {
 //   knex.first('restaurants.id', 'name', 'cuisine', 'borough', 'grades.id', 'grade', 'date as inspectionDate', 'score')
